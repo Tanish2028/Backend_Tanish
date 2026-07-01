@@ -15,4 +15,11 @@ app.use(express.urlencoded({extended:true,limit:"16kb"})) //url ko encod karne k
 app.use(express.static("public")) //storing some files,datas in personal server
 
 app.use(cookieParser());
+
+
+//routes
+import userRouter from './Routes/User.routes.js'
+
+//routes declaration
+app.use("/api/v1/user",userRouter);
 export {app}
